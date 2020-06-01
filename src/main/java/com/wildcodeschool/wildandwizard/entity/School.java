@@ -13,7 +13,7 @@ public class School {
     private Long capacity;
     private String country;
 
-    @OneToMany(mappedBy = "school")
+    @OneToMany(mappedBy = "school", cascade = CascadeType.ALL)
     private List<Wizard> wizards;
 
     public School() {
